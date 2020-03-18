@@ -143,7 +143,7 @@ const ArticlePage = ({data}) => {
               setResponseVisible(true)
               setResponseColor("success")
               setResponseContent(<div>Your comment has been submitted
-                <strong>Successfully</strong>
+                <strong>&nbsp; Successfully &nbsp; </strong>
                 and will be published soon.</div>)
               resetRecaptcha()
               setSubmitting(false)
@@ -259,19 +259,19 @@ const ArticlePage = ({data}) => {
               }}/>
           </div>
           <h2 className="mb-3 color-primary text-uppercase erbaum-bold pt-4 space-1">{article.title}</h2>
-          <div className="media">
-            <div className="media-left my-auto">
-              <p className="mb-0" style={{
+          <div className="d-lg-flex">
+            <div className="w-100 my-auto">
+              <p className="mb-sm-2 mb-md-0" style={{
                   fontSize: '12px'
                 }}>By
-                <span>{article.author.firstName}</span>
+                <span class="ml-1 mr-1">{article.author.firstName}</span>
                 In
-                <span>{article.blog.title}</span>
+                <span class="ml-1 mr-1">{article.blog.title}</span>
                 Posted
-                <span>{article.publishedAt}</span>
+                <span class="ml-1 mr-1">{article.publishedAt}</span>
               </p>
             </div>
-            <div className="media-body my-auto text-left text-sm-right text-lg-right text-xl-right" style={{
+            <div className="my-auto text-left text-sm-right text-lg-right text-xl-right" style={{
                 display: 'ruby'
               }}>
               <button id="share" style={{
